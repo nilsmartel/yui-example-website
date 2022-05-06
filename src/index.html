@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .animation {
+                position: absolute;
+                width: 16px;
+                background-color: antiquewhite;
+            }
+            body {
+                font-family: "Roboto";
+                font-weight: 100;
+                display: flex;
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 48pt;
+            }
+
+            .animated {
+                transition: all 0.2s;
+            }
+
+            .unaffect {
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+
+            body {
+                margin: 0;
+            }
+            #offset-headline {
+                height: 25%;
+            }
+
+            .orange {
+                background-color: orange;
+            }
+
+            .lightblue {
+                background-color: lightblue;
+            }
+
+            .wh100 {
+                height: 100vh;
+                width: 100vw;
+            }
+
+            .h100 {
+                height: inherit;
+            }
+
+            #page1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            #page2 {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                overflow: visible;
+            }
+
+            #page3 {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: cadetblue;
+                height: 100vh;
+                width: 100vw;
+                overflow: hidden;
+            }
+
+            .text-mid {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #rocket {
+                position: relative;
+            }
+        </style>
+        <script src="index.ts" type="module" />
+    </head>
+    <body>
+        <div id="page1" class="wh100 lightblue">
+            <div id="offset-headline">
+                <div class="animation h100" id="animation-headline"></div>
+            </div>
+            <h1>
+                <div class="unaffect">
+                    <div
+                        class="animation"
+                        id="animation-subtitle2"
+                        style="top: -80px; height: 64px"
+                    ></div>
+                </div>
+                New Tech
+            </h1>
+            <h4 id="subtitle" class="animated">
+                Better Tech <span id="subtitle2">for your life</span>
+
+                <div class="unaffect">
+                    <div
+                        class="animation"
+                        id="animation-page2-1"
+                        style="height: 192px"
+                    ></div>
+                </div>
+            </h4>
+        </div>
+
+        <div id="page2" class="wh100 orange" style="height: 50vh">
+            <div class="unaffect">
+                <div
+                    class="animation"
+                    id="animation-page2-rocket"
+                    style="height: 200px; top: -50vh; left: 0"
+                ></div>
+            </div>
+            <div class="text-mid">
+                <p>our mission is simple:</p>
+                <h3>to create the worlds greenest solution</h3>
+                <h5>for international</h5>
+                <h2>spaceflight.</h2>
+                <p id="rocket">🚀</p>
+            </div>
+        </div>
+
+        <div id="page3">
+            <div class="unaffect">
+                <div id="animation-page3-show-map" class="animation" style="
+                position:absolute;
+                left:0;
+                top: -33vh;
+                height: 33vh;"></div>
+            </div>
+            <div id="rect" style="
+                margin-top: calc(50% - 128px);
+                width: 256px;
+                height: 256px;
+                background-color: aquamarine;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+            ">
+            <h1>buy.</h1></div>
+        </div>
+    </body>
+</html>
